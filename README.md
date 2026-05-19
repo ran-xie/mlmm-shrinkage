@@ -21,6 +21,7 @@ $$ S_n = p^{-1} Y^T B Y. $$
 
 ### Estimating $\Sigma_1,\ldots,\Sigma_k$
 Without loss of generality, we focus on $\Sigma_1$. Given a quadratic-form estimator $S_n$ (e.g., an unbiased MANOVA estimator), we study shrinkage estimators with squared Frobenius loss
+
 $$
     \mathcal{L}_n^{\text{FR}}(\hat{\Sigma}_n,\Sigma_1)=\frac{1}{p}\Tr [(\hat{\Sigma}_n-\Sigma_1)^2].
 $$

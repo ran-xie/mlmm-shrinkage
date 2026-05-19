@@ -16,19 +16,21 @@ $$ Y = X\beta + \sum_{r=1}^k U_r \alpha_r, \quad \alpha_r \sim N(0, \text{Id}_{I
 where $Y \in \mathbb{R}^{n \times p}$ is the observed trait matrix, $X \in \mathbb{R}^{n \times I_0}$ is the fixed effects design matrix, $\beta \in \mathbb{R}^{I_0 \times p}$ is the fixed effect coefficient matrix, $U_r \in \mathbb{R}^{n \times I_r}$ are known design matrices, and $\alpha_r \in \mathbb{R}^{I_r \times p}$ are independent random effect matrices.
 
 (ii) Let  $B \in \mathbb{R}^{n \times n}$ be a non-zero matrix that satisfies $BX = 0$. Our estimators are built from quadratic form matrices
-$$
-S_n = p^{-1} Y^T B Y.
-$$
+
+$$ S_n = p^{-1} Y^T B Y. $$
 
 ### Estimating $\Sigma_1,\ldots,\Sigma_k$
 Without loss of generality, we focus on $\Sigma_1$. Given a quadratic-form estimator $S_n$ (e.g., an unbiased MANOVA estimator), we study shrinkage estimators with squared Frobenius loss
 $$
     \mathcal{L}_n^{\text{FR}}(\hat{\Sigma}_n,\Sigma_1)=\frac{1}{p}\Tr [(\hat{\Sigma}_n-\Sigma_1)^2].
 $$
+
 We consider estimators that share the eigenvectors of $S_n$ and shrink the eigenvalues. The oracle estimator in this class has $i$-th eigenvalue
+
 $$
 d_{n,i}^{\text{or}}=u_{n,i}^T\Sigma_1u_{n,i},
 $$
+
 where $u_{n,i}$ is the $i$-th eigenvector of $S_n$.
 
 This package implements:

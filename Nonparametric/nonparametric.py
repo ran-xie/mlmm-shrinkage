@@ -110,9 +110,9 @@ def bona_fide_est(Y,U_list,B, thresh = 1e-5, isotonic=True,seed = 1):
         return b
 
     def a_to_b_func(a_flat):
-        a = np.array([complex(a_flat[0],a_flat[1]),complex(a_flat[2],a_flat[3]),complex(a_flat[4],a_flat[5])])
+        a = np.array([complex(a_flat[2*i],a_flat[2*i+1]) for i in range(int(len(a_flat)/2))])
         computed_b = a_to_b(a)
-        return np.array([computed_b[0].real,computed_b[0].imag,computed_b[1].real,computed_b[1].imag,computed_b[2].real,computed_b[2].imag])
+        return np.array([x for c in computed_b for x in (c.real, c.imag)])
     
     d_hat = np.zeros(p)
     a1_hat_Im = np.zeros(p)

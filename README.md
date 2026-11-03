@@ -58,10 +58,13 @@ The code available under 'experiments/' in the repository replicates the experim
 
 ## References
 ```bibtex
-@article{Nonparametric2026, 
-  author={Iain Johnstone and Ran Xie},
-  title={Nonparametric shrinkage estimation of high-dimensional genetic covariance},  
-  year={2026}, 
-  ...
+@misc{Nonparametric2026,
+      title={Nonparametric shrinkage estimation of high-dimensional variance component matrices}, 
+      author={Ran Xie and Iain M. Johnstone},
+      year={2026},
+      eprint={2610.33431},
+      archivePrefix={arXiv},
+      primaryClass={stat.ME},
+      url={https://arxiv.org/abs/2610.33431}, 
 }
 ```
